@@ -2,6 +2,22 @@ const convertBtn = document.getElementById('convertBtn');
 const formatSelect = document.getElementById('formatSelect');
 const convertedImage = document.getElementById('convertedImage');
 const convertedSize = document.getElementById('convertedSize');
+const originalImage = document.getElementById('originalImage');
+const downloadLink = document.getElementById('downloadLink');
+
+document.getElementById('upload').addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    
+    reader.onload = (e) => {
+        originalImage.src = e.target.result;
+        originalImage.style.display = 'block';
+    };
+    
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
 
 convertBtn.addEventListener('click', () => {
     const format = formatSelect.value;

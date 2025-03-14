@@ -9,11 +9,18 @@
 <body>
     <div class="container">
         <h2>图片格式转换工具</h2>
-        <input type="file" id="upload" accept="image/png, image/jpeg, image/gif" />
+        <input type="file" id="upload" accept="image/*" />
         <select id="formatSelect">
-            <option value="image/jpeg">JPG</option>
+            <option value="image/jpeg">JPEG/JPG</option>
             <option value="image/png">PNG</option>
             <option value="image/gif">GIF</option>
+            <option value="image/webp">WEBP</option>
+            <option value="image/bmp">BMP</option>
+            <option value="image/tiff">TIFF</option>
+            <option value="image/svg+xml">SVG</option>
+            <option value="image/heic">HEIC</option>
+            <option value="image/jfif">JFIF</option>
+            <option value="image/exif">EXIF</option>
         </select>
         <button id="convertBtn">转换格式</button>
         <div class="preview">
