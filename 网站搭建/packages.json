@@ -1,0 +1,20 @@
+{
+    "name": "image-processing-tool",
+    "version": "1.0.0", 
+    "description": "A web tool for image compression and format conversion", 
+    "main": "index.html", 
+    "scripts": {
+      "start": "live-server",
+      "build": "echo 'No build step required'" 
+    },
+    "keywords": ["image", "compression", "conversion"], 
+    "author": "ningbo", 
+    "license": "MIT", 
+    "dependencies": {
+      "jspdf": "^2.4.0", 
+      "docx": "^7.0.0" 
+    },
+    "devDependencies": {
+      "live-server": "^1.2.1" 
+    }
+  }
