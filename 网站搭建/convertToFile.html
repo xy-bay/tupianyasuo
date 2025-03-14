@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合成文件</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.0.0/docx.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>合成 Word 或 PDF 文件</h2>
+        <input type="file" id="upload" accept="image/png, image/jpeg, image/gif" multiple />
+        <select id="fileTypeSelect">
+            <option value="pdf">PDF</option>
+            <option value="docx">Word</option>
+        </select>
+        <button id="createFileBtn">生成文件</button>
+        <div class="preview">
+            <h3>上传的图片</h3>
+            <img id="uploadedImage" />
+            <div class="size" id="uploadedSize"></div>
+            <a id="downloadLink" style="display:none;">下载生成的文件</a>
+        </div>
+    </div>
+    <script src="convertToFile.js"></script>
+</body>
+</html>

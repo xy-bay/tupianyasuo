@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>图片压缩工具</h2>
+        <input type="file" id="upload" accept="image/png, image/jpeg" />
+        <input type="number" id="compressionRatio" placeholder="压缩比例(%)" min="1" max="100" value="50" />
+        <button id="compressBtn">压缩图片</button>
+        <div class="preview">
+            <h3>原始图片</h3>
+            <img id="originalImage" />
+            <div class="size" id="originalSize"></div>
+            <h3>压缩后的图片</h3>
+            <img id="compressedImage" />
+            <div class="size" id="compressedSize"></div>
+            <a id="downloadLink" style="display:none;">下载压缩后的图片</a>
+        </div>
+    </div>
+    <script src="compress.js"></script>
+</body>
+</html>
