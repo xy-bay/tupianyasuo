@@ -1,0 +1,70 @@
+<!-- 文件路径: 网站搭建/convertToFile.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合成 Word/PDF 文件</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.0.0/docx.min.js"></script>
+    <style>
+        .button-container {
+            margin-top: 20px; /* 增加按钮与上方内容的间距 */
+        }
+        #progressBar {
+            width: 100%;
+            height: 20px;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0; /* 增加上下间距 */
+            display: none; /* 默认隐藏 */
+        }
+        #progress {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+        #completionMessage {
+            text-align: center;
+            color: green;
+            font-size: 18px;
+            margin: 10px 0;
+            display: none; /* 默认隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>合成 Word/PDF 文件工具</h2>
+        
+        <input type="file" id="fileUpload" accept="image/*" multiple />
+        
+        <div>
+            <label for="fileFormat">选择文件格式:</label>
+            <select id="fileFormat">
+                <option value="pdf">PDF</option>
+                <option value="word">Word</option>
+            </select>
+        </div>
+        
+        <div id="progressBar">
+            <div id="progress">0%</div>
+        </div>
+        <div id="completionMessage">合成完成</div>
+        
+        <div class="button-container">
+            <button id="convertToFileBtn">合成文件</button>
+            <button id="downloadFileBtn" style="display: none;">下载合成的文件</button>
+        </div>
+        
+        <h3>合成后的文件预览</h3>
+        <div id="filePreview" class="image-container"></div>
+    </div>
+    <script src="convertToFile.js"></script>
+</body>
+</html>

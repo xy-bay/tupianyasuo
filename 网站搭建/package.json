@@ -1,0 +1,12 @@
+{
+  "name": "file-processing-tool",
+  "version": "1.0.0",
+  "description": "一个用于文件压缩、转换和合并的工具",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  }
+}

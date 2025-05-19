@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px; /* 容器宽度 */
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* 从上到下排列 */
+    gap: 15px; /* 增加按钮之间的间距 */
+    margin-top: 20px; /* 顶部间距 */
+}
+
+button {
+    padding: 10px; /* 减小按钮的内边距 */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    cursor: pointer;
+    width: 100%; /* 将按钮宽度设置为100% */
+}
+
+button:hover {
+    background-color: #45a049; /* 悬停时的背景色 */
+}
+.download-link {
+    display: block;
+    margin: 10px 0; /* 增加上下间距 */
+}

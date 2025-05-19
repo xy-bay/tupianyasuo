@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片格式转换</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .button-container {
+            margin-top: 20px; /* 增加按钮与上方内容的间距 */
+        }
+        #progressBar {
+            width: 100%;
+            height: 20px;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0; /* 增加上下间距 */
+            display: none; /* 默认隐藏 */
+        }
+        #progress {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+        #completionMessage {
+            text-align: center;
+            color: green;
+            font-size: 18px;
+            margin: 10px 0;
+            display: none; /* 默认隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>图片格式转换工具</h2>
+        
+        <input type="file" id="convertUpload" accept="image/*" multiple />
+        <div>
+            <label for="targetFormat">选择目标格式:</label>
+            <select id="targetFormat">
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="webp">WEBP</option>
+                <option value="gif">GIF</option>
+                <option value="bmp">BMP</option>
+                <option value="tiff">TIFF</option>
+                <option value="svg">SVG</option>
+            </select>
+        </div>
+        
+        <div id="progressBar">
+            <div id="progress">0%</div>
+        </div>
+        <div id="completionMessage">转换完成</div> <!-- 新增转换完成提示 -->
+        
+        <div class="button-container">
+            <button id="convertBtn">转换图片</button>
+            <button id="downloadZipBtn" style="display: none;">下载所有转换后的图片</button> <!-- 新增下载 ZIP 按钮 -->
+        </div>
+        
+        <h3>转换后的图片</h3> <!-- 新增标题 -->
+        <div id="convertedImages" class="image-container"></div> <!-- 显示转换后的图片 -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="convert.js"></script>
+</body>
+</html>
